@@ -88,11 +88,11 @@ function setClickEndTiming()
         {
             if(timeValue < 1000)
             {
-                button2.textContent = `${timeValue}ms behind`;
+                button2.textContent = `${timeValue} ms behind`;
             }
             else
             {
-                button2.textContent = `${timeValue/1000}s behind`;
+                button2.textContent = `${timeValue/1000} s behind`;
             }
             
         }
@@ -100,11 +100,11 @@ function setClickEndTiming()
         {
             if(timeValue < 1000)
             {
-                button1.textContent = `${timeValue}ms behind`;
+                button1.textContent = `${timeValue} ms behind`;
             }
             else
             {
-                button1.textContent = `${timeValue/1000}s behind`;
+                button1.textContent = `${timeValue/1000} s behind`;
             }
         }
         setTimeAlready = true;
