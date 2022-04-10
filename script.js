@@ -8,6 +8,9 @@ let setTimeAlready = false;
 button1.ontouchstart = button1Touch;
 button2.ontouchstart = button2Touch;
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 /*
 button1.addEventListener("touchStart", function(e)
 {
@@ -80,13 +83,29 @@ function setClickEndTiming()
 {
     if(!setTimeAlready)
     {
+        let timeValue = clickEnd - clickStart
         if(winnningSide === 0)
         {
-            button2.textContent = `${clickEnd - clickStart}ms behind`;
+            if(timeValue < 1000)
+            {
+                button2.textContent = `${timeValue}ms behind`;
+            }
+            else
+            {
+                button2.textContent = `${timeValue/1000}s behind`;
+            }
+            
         }
         else if(winnningSide === 1)
         {
-            button1.textContent = `${clickEnd - clickStart}ms behind`;
+            if(timeValue < 1000)
+            {
+                button1.textContent = `${timeValue}ms behind`;
+            }
+            else
+            {
+                button1.textContent = `${timeValue/1000}s behind`;
+            }
         }
         setTimeAlready = true;
     }
