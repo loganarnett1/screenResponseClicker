@@ -2,7 +2,7 @@ const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 
 let winnningSide = -1;
-button1.addEventListener("click", function()
+button1.addEventListener("touchStart", function()
 {
     if(winnningSide === -1)
     {
@@ -11,7 +11,7 @@ button1.addEventListener("click", function()
     setWinningSide();
 });
 
-button2.addEventListener("click", function()
+button2.addEventListener("touchStart", function()
 {
     if(winnningSide === -1)
     {
