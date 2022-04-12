@@ -35,7 +35,7 @@ button2.addEventListener("touchStart", function(e)
 function button1Touch(e)
 {
     e.preventDefault();
-    if(winnningSide === -1)
+    if(winnningSide === -1 && winnningSide !== 0)
     {
         clickStart = Date.now();
         winnningSide = 0;
@@ -51,7 +51,7 @@ function button1Touch(e)
 function button2Touch(e)
 {
     e.preventDefault();
-    if(winnningSide === -1)
+    if(winnningSide === -1 && winnningSide !== 1)
     {
         clickStart = Date.now();
         winnningSide = 1;
