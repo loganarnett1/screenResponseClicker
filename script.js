@@ -1,5 +1,7 @@
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
+const button1div = document.querySelector("#button1 div");
+const button2div = document.querySelector("#button2 div");
 
 let winnningSide = -1;
 let clickStart;
@@ -88,11 +90,13 @@ function setClickEndTiming()
         {
             if(timeValue < 1000)
             {
-                button2.innerHTML = `${timeValue} ms <br>behind`;
+                //button2.innerHTML = `${timeValue} ms <br>behind`;
+                button2div.innerHTML = `${timeValue} ms <br>behind`;
             }
             else
             {
-                button2.innerHTML = `${timeValue/1000} s <br>behind`;
+                //button2.innerHTML = `${timeValue/1000} s <br>behind`;
+                button2div.innerHTML = `${timeValue/1000} s <br>behind`;
             }
             
         }
@@ -100,11 +104,13 @@ function setClickEndTiming()
         {
             if(timeValue < 1000)
             {
-                button1.innerHTML = `${timeValue} ms <br>behind`;
+                //button1.innerHTML = `${timeValue} ms <br>behind`;
+                button1div.innerHTML = `${timeValue} ms <br>behind`;
             }
             else
             {
-                button1.innerHTML = `${timeValue/1000} s <br>behind`;
+                //button1.innerHTML = `${timeValue/1000} s <br>behind`;
+                button1div.innerHTML = `${timeValue/1000} s <br>behind`;
             }
         }
         setTimeAlready = true;
